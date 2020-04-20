@@ -16,11 +16,11 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-         e1= (EditText)findViewById(R.id.emailText);
-         p1= (EditText)findViewById(R.id.passwordText);
+         e1= findViewById(R.id.emailText);
+         p1= findViewById(R.id.passwordText);
 
-        Button login = (Button)findViewById(R.id.loginButton);
-        Button signupBtn = (Button)findViewById(R.id.signupBtn);
+        Button login = findViewById(R.id.loginButton);
+        Button signupBtn = findViewById(R.id.signupBtn);
         db= new DatabaseHelper(this);
         signupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
                 String email = e1.getText().toString();
                 String password= p1.getText().toString();
                 Boolean checkLogin= db.loginCheck(email,password);
-                if(checkLogin==true){
+                if(checkLogin){
                     Intent startIntent2 = new Intent(getApplicationContext(), HomeFeed.class);
                     startActivity(startIntent2);
                 }
