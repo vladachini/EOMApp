@@ -20,9 +20,9 @@ public class MainActivity extends AppCompatActivity {
          p1= findViewById(R.id.passwordText);
 
         Button login = findViewById(R.id.loginButton);
-        Button signupBtn = findViewById(R.id.signupBtn);
+        Button signUpBtn = findViewById(R.id.signupBtn);
         db= new DatabaseHelper(this);
-        signupBtn.setOnClickListener(new View.OnClickListener() {
+        signUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //changing to second screen
