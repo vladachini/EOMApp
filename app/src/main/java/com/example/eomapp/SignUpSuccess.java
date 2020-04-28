@@ -14,7 +14,7 @@ public class SignUpSuccess extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up_success);
 
-        Button l1= (Button)findViewById(R.id.loginButton2);
+        Button l1= findViewById(R.id.loginButton2);
         l1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

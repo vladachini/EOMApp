@@ -3,35 +3,41 @@ package com.example.eomapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+
+import static android.view.View.*;
 
 public class SignupActivity extends AppCompatActivity {
 
     private EditText userEmail;
     private EditText userPassword;
     private EditText cpass;
+    
     Button b1;
-    DatabaseHelper db;
+    DatabaseHelper db = new DatabaseHelper(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
 
-        cpass=(EditText)findViewById(R.id.userConfirmText);
-        userEmail= (EditText)findViewById(R.id.usereText);
-        userPassword= (EditText)findViewById(R.id.userpassText);
-        b1=(Button)findViewById(R.id.signUp2Btn);
-        db= new DatabaseHelper(this);
 
-        b1.setOnClickListener(new View.OnClickListener() {
+
+        cpass= findViewById(R.id.userConfirmText);
+        userEmail= findViewById(R.id.usereText);
+        userPassword= findViewById(R.id.userpassText);
+        b1=findViewById(R.id.button);
+
+        b1.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v) {
                 String e1= userEmail.getText().toString();

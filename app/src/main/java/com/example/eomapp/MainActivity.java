@@ -3,10 +3,12 @@ package com.example.eomapp;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Paint;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -19,10 +21,12 @@ public class MainActivity extends AppCompatActivity {
          e1= findViewById(R.id.emailText);
          p1= findViewById(R.id.passwordText);
 
+
+         TextView signUp = findViewById(R.id.textView5);
+         signUp.setPaintFlags(signUp.getPaintFlags()|Paint.UNDERLINE_TEXT_FLAG);
         Button login = findViewById(R.id.loginButton);
-        Button signUpBtn = findViewById(R.id.signupBtn);
         db= new DatabaseHelper(this);
-        signUpBtn.setOnClickListener(new View.OnClickListener() {
+        signUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 //changing to second screen

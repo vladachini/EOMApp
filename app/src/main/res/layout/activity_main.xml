@@ -13,93 +13,112 @@
         android:layout_width="316dp"
         android:layout_height="110dp"
         android:layout_marginTop="4dp"
-        android:text="Welcome to The Lion's Den"
+        android:text="The Lion's Den"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        android:textColor="#FFC107"
+        android:textColor="#FFE500"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.726"
+        app:layout_constraintHorizontal_bias="0.642"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.066" />
+        app:layout_constraintVertical_bias="0.0" />
+
 
     <EditText
         android:id="@+id/emailText"
         android:layout_width="322dp"
         android:layout_height="52dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="146dp"
+        android:cursorVisible="true"
         android:ems="10"
         android:hint="Enter Email"
         android:inputType="textEmailAddress"
+        android:textColor="#F4EDED"
+        android:textColorHighlight="#FFFCFC"
+        android:textColorHint="#FFF7F7"
+        android:textColorLink="#ECE8E8"
+        android:textCursorDrawable="@color/colorPrimaryDark"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.528"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/WelcomeText" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/passwordText"
         android:layout_width="320dp"
         android:layout_height="52dp"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginBottom="409dp"
+        android:cursorVisible="true"
         android:ems="10"
         android:hint="Enter Password"
         android:inputType="textPassword"
+        android:textColorHint="#FFFFFF"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/emailText" />
 
+
     <Button
         android:id="@+id/loginButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="#8BC34A"
+        android:layout_width="80dp"
+        android:layout_height="35dp"
+        android:layout_marginTop="79dp"
+        android:background="@drawable/rounded_button"
+        android:drawableBottom="@drawable/rounded_button"
         android:text="Login"
-        android:textColor="#FFC107"
-        tools:layout_editor_absoluteX="161dp"
-        tools:layout_editor_absoluteY="437dp" />
+        android:textColor="#FFFFFF"
+        android:textColorHint="#000000"
+        android:textColorLink="#0E8113"
+        app:layout_constraintEnd_toStartOf="@+id/WelcomeText"
+        app:layout_constraintHorizontal_bias="0.534"
+        app:layout_constraintStart_toEndOf="@+id/WelcomeText"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="197dp"
-        android:layout_height="82dp"
-        android:layout_marginStart="56dp"
-        android:layout_marginLeft="56dp"
-        android:layout_marginEnd="32dp"
-        android:layout_marginRight="32dp"
-        android:layout_marginBottom="80dp"
-        android:text="Don't Have an Account? "
+        android:layout_width="208dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="544dp"
+        android:text="Don't have an account? "
         android:textAppearance="@style/TextAppearance.AppCompat.Display1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/signupBtn"
-        app:layout_constraintHorizontal_bias="0.38"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/signupBtn"
-        android:layout_width="104dp"
-        android:layout_height="80dp"
-        android:layout_marginStart="32dp"
-        android:layout_marginLeft="32dp"
-        android:layout_marginEnd="45dp"
-        android:layout_marginRight="45dp"
-        android:layout_marginBottom="160dp"
-        android:background="#8BC34A"
-        android:text="Sign Up"
-        android:textColor="#FFC107"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/textView" />
-
+        android:textColor="#EADFDF"
+        android:textSize="18sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageView2"
-        android:layout_width="260dp"
-        android:layout_height="564dp"
-        app:srcCompat="@drawable/lion"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="338dp" />
+        android:layout_width="183dp"
+        android:layout_height="331dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/lion" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="576dp"
+        android:clickable="true"
+        android:text="Sign Up"
+        android:textAllCaps="true"
+        android:textColor="#FFEB3B"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

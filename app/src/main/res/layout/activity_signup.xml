@@ -9,21 +9,18 @@
 
     <TextView
         android:id="@+id/textView2"
-        android:layout_width="387dp"
-        android:layout_height="125dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginLeft="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginRight="8dp"
-        android:text="Lion's Den Sign Up"
+        android:layout_width="308dp"
+        android:layout_height="105dp"
+        android:text="The Lion's Den"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         android:textColor="#FFEB3B"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.084" />
+        app:layout_constraintVertical_bias="0.057" />
 
     <EditText
         android:id="@+id/usereText"
@@ -32,6 +29,7 @@
         android:ems="10"
         android:hint="Enter Email"
         android:inputType="textPersonName"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintBottom_toTopOf="@+id/userpassText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,15 +39,16 @@
         android:id="@+id/userpassText"
         android:layout_width="343dp"
         android:layout_height="54dp"
-        android:layout_marginTop="44dp"
         android:layout_marginBottom="360dp"
         android:ems="10"
         android:hint="Enter Password"
         android:inputType="textPersonName"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/usereText" />
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:layout_constraintVertical_bias="1.0" />
 
     <EditText
         android:id="@+id/userConfirmText"
@@ -58,22 +57,48 @@
         android:ems="10"
         android:hint="Confirm Password"
         android:inputType="textPersonName"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/userpassText"
-        app:layout_constraintVertical_bias="0.134" />
+        app:layout_constraintVertical_bias="0.069" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="103dp"
+        android:layout_height="184dp"
+        android:layout_marginTop="352dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.951"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lion" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="103dp"
+        android:layout_height="184dp"
+        android:layout_marginTop="352dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.051"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/lion" />
 
     <Button
-        android:id="@+id/signUp2Btn"
-        android:layout_width="305dp"
-        android:layout_height="61dp"
-        android:background="#8BC34A"
+        android:id="@+id/button"
+        android:layout_width="105dp"
+        android:layout_height="48dp"
+        android:background="@drawable/rounded_button"
         android:text="SIGN UP"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        android:textColor="#FFEB3B"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#FFFFFF"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/userConfirmText" />
+        app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintStart_toEndOf="@+id/imageView4"
+        app:layout_constraintTop_toBottomOf="@+id/userConfirmText"
+        app:layout_constraintVertical_bias="0.386" />
 </androidx.constraintlayout.widget.ConstraintLayout>
