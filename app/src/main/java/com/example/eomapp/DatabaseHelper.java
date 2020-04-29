@@ -31,19 +31,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     //Inserting in database
-    public boolean insert(String email, String password){
-        SQLiteDatabase db= this.getWritableDatabase();
-        ContentValues contentValues= new ContentValues();
-        contentValues.put("email",email);
-        contentValues.put("password",password);
-        Log.d("Log ","inserting  "+ email + " " + password);
-        long ins= db.insert("user",null,contentValues );
+    public boolean insert(String email, String password) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues contentValues = new ContentValues();
+        contentValues.put("email", email);
+        contentValues.put("password", password);
+        Log.d("Log ", "inserting  " + email + " " + password);
+        long ins = db.insert("user", null, contentValues);
 
-    //Database returns -1 if not inserted correctly
-        if(ins==-1) return false;
+        //Database returns -1 if not inserted correctly
+        if (ins == -1) return false;
         else return true;
 
-        return ins != -1;
+
+
     }
     public  void insertEvent(String title, String category, String Date, String Time,
                                String details, String author){
@@ -70,7 +71,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if (cursor.getCount()==1) return true;
         else return false;
 
-        return cursor.getCount() > 0;
 
     }
 }
