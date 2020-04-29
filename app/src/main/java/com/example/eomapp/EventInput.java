@@ -21,7 +21,7 @@ public class EventInput extends AppCompatActivity {
         category= findViewById(R.id.categoryText);
         String eventC= category.getText().toString();
         date= findViewById(R.id.dateText);
-        
+
 
 
 
