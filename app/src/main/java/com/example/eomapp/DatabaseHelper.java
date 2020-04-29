@@ -38,11 +38,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         contentValues.put("password",password);
         Log.d("Log ","inserting  "+ email + " " + password);
         long ins= db.insert("user",null,contentValues );
-<<<<<<< HEAD
+
     //Database returns -1 if not inserted correctly
         if(ins==-1) return false;
         else return true;
-=======
+
         return ins != -1;
     }
     public  void insertEvent(String title, String category, String Date, String Time,
@@ -66,11 +66,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public boolean loginCheck(String email, String password){
         SQLiteDatabase db= this.getReadableDatabase();
         Cursor cursor= db.rawQuery("select * from user where email=? and password=?", new String[]{email,password});
-<<<<<<< HEAD
+
         if (cursor.getCount()==1) return true;
         else return false;
-=======
+
         return cursor.getCount() > 0;
->>>>>>> FrankGui
+
     }
 }
