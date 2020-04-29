@@ -21,7 +21,7 @@ public class SignupActivity extends AppCompatActivity {
     private EditText userEmail;
     private EditText userPassword;
     private EditText cpass;
-    
+
     Button b1;
     DatabaseHelper db = new DatabaseHelper(this);
 
