@@ -71,6 +71,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if (cursor.getCount()==1) return true;
         else return false;
 
-       
+
     }
 }
