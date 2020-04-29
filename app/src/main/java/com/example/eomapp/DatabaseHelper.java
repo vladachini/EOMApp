@@ -5,12 +5,18 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
+
 
 
 
 public class DatabaseHelper extends SQLiteOpenHelper {
+    private static final String DATABASE_NAME="Login.db";
+    private static final int DATABASE_VERSION= 1;
+
     public DatabaseHelper(Context context) {
-        super(context, "Login.db",  null,  1);
+
+        super(context, DATABASE_NAME,  null,  DATABASE_VERSION);
     }
 
     @Override
@@ -30,10 +36,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         ContentValues contentValues= new ContentValues();
         contentValues.put("email",email);
         contentValues.put("password",password);
+        Log.d("Log ","inserting  "+ email + " " + password);
         long ins= db.insert("user",null,contentValues );
+    //Database returns -1 if not inserted correctly
         if(ins==-1) return false;
         else return true;
     }
+    public  void insertEvent(String title, String category, String Date, String Time,
+                               String details, String author){
+        SQLiteDatabase db= this.getWritableDatabase();
+        String ins;
+        ins="INSERT INTO Events (Title, Category, Date, Time, Details, Author) " +
+                "VALUES (" + title + ", " + category + ", " + Date + ", " +
+                Time + ", " + details + "," + author + ")";
+          db.execSQL(ins);
+
+    }
+
     //checking if email exists
     public Boolean checkemail(String email){
         SQLiteDatabase db= this.getReadableDatabase();
@@ -45,7 +64,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public boolean loginCheck(String email, String password){
         SQLiteDatabase db= this.getReadableDatabase();
         Cursor cursor= db.rawQuery("select * from user where email=? and password=?", new String[]{email,password});
-        if (cursor.getCount()>0) return true;
+        if (cursor.getCount()==1) return true;
         else return false;
     }
 }

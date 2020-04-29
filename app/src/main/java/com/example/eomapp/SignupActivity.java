@@ -51,10 +51,10 @@ public class SignupActivity extends AppCompatActivity {
                 }
                 else{
                     if(p1.equals(p2)){
-                        Boolean checkemail = db.checkemail(e1);
-                        if(checkemail==true){
+                        Boolean checkEmail = db.checkemail(e1);
+                        if(checkEmail==true && vEmail==true && vPassword==true){
                             Boolean insert = db.insert(e1,p1);
-                            if(insert==true && vEmail==true && vPassword==true){
+                            if(insert==true ){
                                 Toast.makeText(getApplicationContext(), "Registered Successfully", Toast.LENGTH_SHORT).show();
                                 Intent startIntent = new Intent(getApplicationContext(), SignUpSuccess.class);
                                 startActivity(startIntent);
@@ -90,7 +90,7 @@ public class SignupActivity extends AppCompatActivity {
 
     }
     public static boolean isValidPassword(String password) {
-        Matcher matcher = Pattern.compile("((?=.*[a-z])(?=.*[A-Z]).{4,20})").matcher(password);
+        Matcher matcher = Pattern.compile("((?=.*[a-z])(?=.*[A-Z]).{8,20})").matcher(password);
         return matcher.matches();
     }
 }
