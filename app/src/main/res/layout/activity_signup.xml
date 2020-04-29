@@ -89,16 +89,17 @@
 
     <Button
         android:id="@+id/button"
-        android:layout_width="105dp"
-        android:layout_height="48dp"
-        android:background="@drawable/rounded_button"
+        android:layout_width="303dp"
+        android:layout_height="113dp"
+        android:background="@drawable/rounded_b"
         android:text="SIGN UP"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
         android:textColor="#FFFFFF"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/imageView3"
+        app:layout_constraintHorizontal_bias="0.681"
         app:layout_constraintStart_toEndOf="@+id/imageView4"
         app:layout_constraintTop_toBottomOf="@+id/userConfirmText"
-        app:layout_constraintVertical_bias="0.386" />
+        app:layout_constraintVertical_bias="0.668" />
 </androidx.constraintlayout.widget.ConstraintLayout>

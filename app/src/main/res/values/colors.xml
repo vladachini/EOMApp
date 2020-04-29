@@ -3,5 +3,7 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
-    <color name="btColour">#FFDAC616</color>
+    <color name="tbColour">#1E882B</color>
+    <color name="tfColour">#fefefeff</color>
+    <color name="rColour">#FCDCB425</color>
 </resources>
