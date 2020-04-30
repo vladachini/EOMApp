@@ -5,5 +5,6 @@
     <color name="colorAccent">#03DAC5</color>
     <color name="tbColour">#1E882B</color>
     <color name="tfColour">#fefefeff</color>
-    <color name="rColour">#FFEB3B</color>
+    <color name="rColour">#FFDDC120</color>
+    <color name="rbColour">#FFC107</color>
 </resources>
