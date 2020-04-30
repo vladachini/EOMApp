@@ -4,13 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#FFEB3B"
+    android:background="#FFFFC107"
     tools:context=".SignupActivity">
 
     <ImageView
         android:id="@+id/imageView9"
-        android:layout_width="329dp"
-        android:layout_height="401dp"
+        android:layout_width="347dp"
+        android:layout_height="405dp"
         android:contentDescription="@string/todo2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,11 +23,11 @@
         android:id="@+id/textView2"
         android:layout_width="364dp"
         android:layout_height="101dp"
-        android:layout_marginBottom="556dp"
+        android:layout_marginBottom="548dp"
         android:fontFamily="@font/bungee_inline"
         android:text="\ \ WELCOME"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        android:textColor="#009688"
+        android:textColor="#1E882B"
         android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -42,7 +42,7 @@
         android:fontFamily="@font/bungee_inline"
         android:text="LION'S DEN"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        android:textColor="#009688"
+        android:textColor="#1E882B"
         android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -59,7 +59,7 @@
         android:fontFamily="@font/bungee_inline"
         android:text="TO THE"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        android:textColor="#009688"
+        android:textColor="#1E882B"
         android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toTopOf="@+id/imageView9"
@@ -70,39 +70,40 @@
         app:layout_constraintVertical_bias="0.242" />
 
     <ImageView
-        android:id="@+id/imageView3"
-        android:layout_width="93dp"
-        android:layout_height="173dp"
-        android:contentDescription="@string/todo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.871"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.987"
-        app:srcCompat="@drawable/lion" />
-
-    <ImageView
         android:id="@+id/imageView4"
-        android:layout_width="123dp"
-        android:layout_height="149dp"
+        android:layout_width="133dp"
+        android:layout_height="176dp"
         android:contentDescription="@string/todo2"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.114"
+        app:layout_constraintHorizontal_bias="0.082"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.967"
+        app:layout_constraintVertical_bias="0.971"
+        app:srcCompat="@drawable/lion" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="133dp"
+        android:layout_height="176dp"
+        android:contentDescription="@string/todo2"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.913"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.971"
         app:srcCompat="@drawable/lion" />
 
     <Button
         android:id="@+id/button"
-        android:layout_width="118dp"
-        android:layout_height="41dp"
+        android:layout_width="110dp"
+        android:layout_height="33dp"
         android:background="@drawable/rounded_text_field"
+        android:fontFamily="sans-serif"
         android:text="@string/sign_up"
         android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textColor="#1E1C1C"
+        android:textColor="#1E882B"
         android:textColorLink="#DDC120"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -110,31 +111,59 @@
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.826" />
+        app:layout_constraintVertical_bias="0.797" />
 
     <EditText
         android:id="@+id/userConfirmText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="236dp"
+        android:layout_height="58dp"
         android:ems="10"
+        android:fontFamily="@font/archivo_black"
         android:hint="@string/confirm_password"
-        android:textColorHint="#171616"
+        android:password="true"
+        android:textColorHint="#FDFCFC"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.704" />
+        app:layout_constraintVertical_bias="0.643" />
 
     <EditText
         android:id="@+id/userpassText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="232dp"
+        android:layout_height="56dp"
         android:ems="10"
+        android:fontFamily="@font/archivo_black"
         android:hint="@string/enter_password"
         android:inputType="textPassword"
+        android:password="true"
         android:textColorHighlight="#FFFFFF"
-        android:textColorHint="#131212"
-        tools:layout_editor_absoluteX="99dp"
-        tools:layout_editor_absoluteY="406dp" />
+        android:textColorHint="#FAF4F4"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.491"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.524" />
+
+    <EditText
+        android:id="@+id/usereText"
+        android:layout_width="233dp"
+        android:layout_height="51dp"
+        android:ems="10"
+        android:fontFamily="@font/archivo_black"
+        android:hint="@string/enter_email"
+        android:inputType="textEmailAddress"
+        android:textColorHint="#FFFFFF"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.407" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
