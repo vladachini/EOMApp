@@ -8,11 +8,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
 
-
-
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME="Login.db";
-    private static final int DATABASE_VERSION= 1;
+    private static final int DATABASE_VERSION= 3;
 
     public DatabaseHelper(Context context) {
 
@@ -21,13 +19,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("Create Table user(email text primary key, password text)");
+        String userTable=("CREATE TABLE user (email TEXT PRIMARY KEY, password TEXT)");
+        String eventTable=("CREATE TABLE Events(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, title TEXT NOT NULL, " +
+                "category text not null, date text not null, time text not null, details text, author text )");
+        db.execSQL(userTable);
+        db.execSQL(eventTable);
+
     }
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        if(oldVersion<4) {
+            db.execSQL("CREATE TABLE Events(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, title TEXT NOT NULL, " +
+                    "category text not null, " +
+                    "date text not null, time text not null, details text, author text )");
+            db.execSQL("CREATE TABLE user (email TEXT PRIMARY KEY, password TEXT)");
+        }
 
-        db.execSQL("drop table if exists user");
     }
 
     //Inserting in database
@@ -42,20 +50,23 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         //Database returns -1 if not inserted correctly
         if (ins == -1) return false;
         else return true;
-
-
-
     }
-    public  void insertEvent(String title, String category, String Date, String Time,
-                               String details, String author){
-        SQLiteDatabase db= this.getWritableDatabase();
-        String ins;
-        ins="INSERT INTO Events (Title, Category, Date, Time, Details, Author) " +
-                "VALUES (" + title + ", " + category + ", " + Date + ", " +
-                Time + ", " + details + "," + author + ")";
-          db.execSQL(ins);
 
+    public  boolean insertEvent(String title, String category, String date, String time,
+                               String details, String author) {
+        SQLiteDatabase db = this.getWritableDatabase();
+        ContentValues eventValues = new ContentValues();
+        eventValues.put("title", title);
+        eventValues.put("category", category);
+        eventValues.put("date", date);
+        eventValues.put("time", time);
+        eventValues.put("details", details);
+        eventValues.put("author", author);
+        long ins = db.insert("Events", null, eventValues);
+        if (ins == -1) return false;
+        else return true;
     }
+
 
     //checking if email exists
     public Boolean checkemail(String email){
@@ -67,10 +78,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public boolean loginCheck(String email, String password){
         SQLiteDatabase db= this.getReadableDatabase();
         Cursor cursor= db.rawQuery("select * from user where email=? and password=?", new String[]{email,password});
-
-        if (cursor.getCount()==1) return true;
-        else return false;
-
-
+        if (cursor.getCount()==1) {
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }
