@@ -25,7 +25,7 @@
         android:layout_height="101dp"
         android:layout_marginBottom="548dp"
         android:fontFamily="@font/bungee_inline"
-        android:text="\ \ WELCOME"
+        android:text="@string/welcomeonly"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         android:textColor="#1E882B"
         android:textSize="60sp"
@@ -40,7 +40,7 @@
         android:layout_width="399dp"
         android:layout_height="134dp"
         android:fontFamily="@font/bungee_inline"
-        android:text="LION'S DEN"
+        android:text="@string/lion_s_den"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         android:textColor="#1E882B"
         android:textSize="60sp"
@@ -57,7 +57,7 @@
         android:layout_width="267dp"
         android:layout_height="105dp"
         android:fontFamily="@font/bungee_inline"
-        android:text="TO THE"
+        android:text="@string/to_the"
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         android:textColor="#1E882B"
         android:textSize="60sp"
@@ -120,7 +120,7 @@
         android:ems="10"
         android:fontFamily="@font/archivo_black"
         android:hint="@string/confirm_password"
-        android:password="true"
+        android:inputType="textPassword"
         android:textColorHint="#FDFCFC"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -128,7 +128,8 @@
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.643" />
+        app:layout_constraintVertical_bias="0.643"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/userpassText"
@@ -138,7 +139,6 @@
         android:fontFamily="@font/archivo_black"
         android:hint="@string/enter_password"
         android:inputType="textPassword"
-        android:password="true"
         android:textColorHighlight="#FFFFFF"
         android:textColorHint="#FAF4F4"
         android:textStyle="bold"
@@ -147,7 +147,8 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.524" />
+        app:layout_constraintVertical_bias="0.524"
+        android:autofillHints="" />
 
     <EditText
         android:id="@+id/usereText"
@@ -164,6 +165,7 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.407" />
+        app:layout_constraintVertical_bias="0.407"
+        android:autofillHints="" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
