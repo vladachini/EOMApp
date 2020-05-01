@@ -62,7 +62,7 @@ public class SignupActivity extends AppCompatActivity {
                             Boolean insert = db.insert(e1,p1);
                             if(insert==true ){
                                 Toast.makeText(getApplicationContext(), "Registered Successfully", Toast.LENGTH_SHORT).show();
-                                Intent startIntent = new Intent(getApplicationContext(), SignUpSuccess.class);
+                                Intent startIntent = new Intent(getApplicationContext(),MainActivity.class);
                                 startActivity(startIntent);
                             }
                         }
