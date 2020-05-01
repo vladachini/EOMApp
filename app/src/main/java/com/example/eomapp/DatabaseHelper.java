@@ -39,7 +39,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     //Inserting in database
-    public boolean insert(String email, String password) {
+    public boolean insertLogin(String email, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("email", email);
@@ -66,7 +66,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         if (ins == -1) return false;
         else return true;
     }
-
 
     //checking if email exists
     public Boolean checkemail(String email){
