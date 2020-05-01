@@ -2,6 +2,7 @@ package com.example.eomapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -38,17 +39,22 @@ public class EventInput extends AppCompatActivity {
                 author= findViewById(R.id.authorText);
                 String eventAuthor= author.getText().toString();
                 Events e= new Events (eventTitle,eventCategory, eventDate, eventTime, eventDetails);
-                if(eventTitle.equals("")|| eventCategory.equals("")|| eventDate.equals("") || eventTime.equals("") ){
+                    if(eventTitle.equals("")|| eventCategory.equals("")|| eventDate.equals("") || eventTime.equals("") ){
                     Toast.makeText(getApplicationContext(), "Make Sure Fields aren't Empty", Toast.LENGTH_SHORT).show();
-                }
-                else {
-                    db.insertEvent(eventTitle,eventCategory,eventDate,eventTime,eventDetails,eventAuthor);
-                }
+                     }
+                     else {
+                        boolean insertCheck=db.insertEvent(eventTitle,eventCategory,eventDate,eventTime,eventDetails,eventAuthor);
+                        if(insertCheck){
+                            Toast.makeText(getApplicationContext(), "Successfully Posted", Toast.LENGTH_SHORT).show();
+                            Intent startIntent = new Intent(getApplicationContext(), HomeFeed.class);
+                            startActivity(startIntent);
+                        }
+                        else{
+                            Toast.makeText(getApplicationContext(), "Error did not Post", Toast.LENGTH_SHORT).show();
+                        }
+                     }
             }
         });
-
-
-
 
 
     }
