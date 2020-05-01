@@ -11,9 +11,7 @@ import android.util.Log;
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME="Login.db";
     private static final int DATABASE_VERSION= 3;
-
     public DatabaseHelper(Context context) {
-
         super(context, DATABASE_NAME,  null,  DATABASE_VERSION);
     }
 
@@ -39,14 +37,13 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     //Inserting in database
-    public boolean insert(String email, String password) {
+    public boolean insertLogin(String email, String password) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues contentValues = new ContentValues();
         contentValues.put("email", email);
         contentValues.put("password", password);
         Log.d("Log ", "inserting  " + email + " " + password);
         long ins = db.insert("user", null, contentValues);
-
         //Database returns -1 if not inserted correctly
         if (ins == -1) return false;
         else return true;

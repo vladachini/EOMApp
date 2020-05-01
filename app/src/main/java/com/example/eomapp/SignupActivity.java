@@ -59,7 +59,7 @@ public class SignupActivity extends AppCompatActivity {
                     if(p1.equals(p2)){
                         Boolean checkEmail = db.checkemail(e1);
                         if(checkEmail==true && vEmail==true && vPassword==true){
-                            Boolean insert = db.insert(e1,p1);
+                            Boolean insert = db.insertLogin(e1,p1);
                             if(insert==true ){
                                 Toast.makeText(getApplicationContext(), "Registered Successfully", Toast.LENGTH_SHORT).show();
                                 Intent startIntent = new Intent(getApplicationContext(),MainActivity.class);
