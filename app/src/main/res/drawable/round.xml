@@ -3,7 +3,7 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     tools:ignore="ExtraText">
     android:shape="rectangle">
-    <solid android:color="@color/rbColour"/>
-    <corners android:radius="25dp"/>`
+    <solid android:color="@color/tbColour"/>
+
 
 </shape>

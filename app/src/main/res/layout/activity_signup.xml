@@ -120,7 +120,9 @@
         android:ems="10"
         android:fontFamily="@font/archivo_black"
         android:hint="@string/confirm_password"
+        android:importantForAutofill="no"
         android:inputType="textPassword"
+        android:textColor="#FFFFFF"
         android:textColorHint="#FDFCFC"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -128,17 +130,18 @@
         app:layout_constraintHorizontal_bias="0.502"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.643"
-        android:importantForAutofill="no" />
+        app:layout_constraintVertical_bias="0.643" />
 
     <EditText
         android:id="@+id/userpassText"
         android:layout_width="232dp"
         android:layout_height="56dp"
+        android:autofillHints=""
         android:ems="10"
         android:fontFamily="@font/archivo_black"
         android:hint="@string/enter_password"
         android:inputType="textPassword"
+        android:textColor="#FFFFFF"
         android:textColorHighlight="#FFFFFF"
         android:textColorHint="#FAF4F4"
         android:textStyle="bold"
@@ -147,17 +150,18 @@
         app:layout_constraintHorizontal_bias="0.491"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.524"
-        android:autofillHints="" />
+        app:layout_constraintVertical_bias="0.524" />
 
     <EditText
         android:id="@+id/usereText"
         android:layout_width="233dp"
         android:layout_height="51dp"
+        android:autofillHints=""
         android:ems="10"
         android:fontFamily="@font/archivo_black"
         android:hint="@string/enter_email"
         android:inputType="textEmailAddress"
+        android:textColor="#FFFFFF"
         android:textColorHint="#FFFFFF"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -165,7 +169,6 @@
         app:layout_constraintHorizontal_bias="0.494"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.407"
-        android:autofillHints="" />
+        app:layout_constraintVertical_bias="0.407" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
