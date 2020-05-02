@@ -10,7 +10,7 @@ import android.util.Log;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME="Login.db";
-    private static final int DATABASE_VERSION= 3;
+    private static final int DATABASE_VERSION= 5;
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME,  null,  DATABASE_VERSION);
     }
@@ -27,11 +27,14 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-        if(oldVersion<4) {
-            db.execSQL("CREATE TABLE Events(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, title TEXT NOT NULL, " +
-                    "category text not null, " +
-                    "date text not null, time text not null, details text, author text )");
-            db.execSQL("CREATE TABLE user (email TEXT PRIMARY KEY, password TEXT)");
+        //if(oldVersion<4) {
+        //    db.execSQL("CREATE TABLE Events(id INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, title TEXT NOT NULL, " +
+         //           "category text not null, " +
+        //            "date text not null, time text not null, details text, author text )");
+       //     db.execSQL("CREATE TABLE user (email TEXT PRIMARY KEY, password TEXT)");
+      //  }
+        if(oldVersion<5){
+            db.execSQL("ALTER TABLE Events ADD endTime Text");
         }
 
     }
