@@ -2,17 +2,26 @@ package com.example.eomapp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.DatePickerDialog;
 import android.content.Intent;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
+
+import java.util.Calendar;
 
 public class EventInput extends AppCompatActivity {
     private EditText title;
     private EditText category;
-    private EditText date;
+    private TextView datePicker;
+    private String date;
+    private DatePickerDialog.OnDateSetListener dateListener;
     private EditText time;
     private EditText details;
     private EditText author;
@@ -22,6 +31,31 @@ public class EventInput extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_input);
+        datePicker= (TextView)findViewById(R.id.datePicker);
+        datePicker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Calendar cal = Calendar.getInstance();
+                int year = cal.get(Calendar.YEAR);
+                int month = cal.get(Calendar.MONTH);
+                int day = cal.get(Calendar.DAY_OF_MONTH);
+                DatePickerDialog dialog = new DatePickerDialog(EventInput.this,
+                        android.R.style.Theme_Holo_Light_Dialog_MinWidth,
+                        dateListener, year, month, day);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
+
+                dateListener = new DatePickerDialog.OnDateSetListener() {
+                    @Override
+                    public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                        month=month+1;
+                        date= month + "/" + dayOfMonth + "/" + year;
+                        datePicker.setText(date);
+                    }
+                };
+            }
+        });
+
         post= findViewById(R.id.postBtn);
         post.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,20 +64,20 @@ public class EventInput extends AppCompatActivity {
                 String eventTitle= title.getText().toString();
                 category= findViewById(R.id.categoryText);
                 String eventCategory= category.getText().toString();
-                date= findViewById(R.id.dateText);
-                String eventDate= date.getText().toString();
+
+
                 time=findViewById(R.id.timeText);
                 String eventTime= time.getText().toString();
                 details= findViewById(R.id.detailsText);
                 String eventDetails= details.getText().toString();
                 author= findViewById(R.id.authorText);
                 String eventAuthor= author.getText().toString();
-                Events e= new Events (eventTitle,eventCategory, eventDate, eventTime, eventDetails);
-                    if(eventTitle.equals("")|| eventCategory.equals("")|| eventDate.equals("") || eventTime.equals("") ){
+                Events e= new Events (eventTitle,eventCategory, date, eventTime, eventDetails);
+                    if(eventTitle.equals("")|| eventCategory.equals("")|| date.equals("") || eventTime.equals("") ){
                     Toast.makeText(getApplicationContext(), "Make Sure Fields aren't Empty", Toast.LENGTH_SHORT).show();
                      }
                      else {
-                        boolean insertCheck=db.insertEvent(eventTitle,eventCategory,eventDate,eventTime,eventDetails,eventAuthor);
+                        boolean insertCheck=db.insertEvent(eventTitle,eventCategory,date,eventTime,eventDetails,eventAuthor);
                         if(insertCheck){
                             Toast.makeText(getApplicationContext(), "Successfully Posted", Toast.LENGTH_SHORT).show();
                             Intent startIntent = new Intent(getApplicationContext(), HomeFeed.class);
