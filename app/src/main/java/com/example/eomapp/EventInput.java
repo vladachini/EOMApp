@@ -25,6 +25,7 @@ public class EventInput extends AppCompatActivity {
     private EditText time;
     private EditText details;
     private EditText author;
+    private EditText endTime;
     private Button post;
     DatabaseHelper db= new DatabaseHelper(this);
     @Override
@@ -32,6 +33,12 @@ public class EventInput extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event_input);
         datePicker= (TextView)findViewById(R.id.datePicker);
+        title= findViewById(R.id.titleText);
+        category= findViewById(R.id.categoryText);
+        time=findViewById(R.id.timeText);
+        details= findViewById(R.id.detailsText);
+        author= findViewById(R.id.authorText);
+        endTime= findViewById(R.id.endTime);
         datePicker.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -49,7 +56,7 @@ public class EventInput extends AppCompatActivity {
                     @Override
                     public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
                         month=month+1;
-                        date= month + "/" + dayOfMonth + "/" + year;
+                        date= year + "-" + month + "-" + dayOfMonth;
                         datePicker.setText(date);
                     }
                 };
@@ -60,24 +67,18 @@ public class EventInput extends AppCompatActivity {
         post.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                title= findViewById(R.id.titleText);
                 String eventTitle= title.getText().toString();
-                category= findViewById(R.id.categoryText);
                 String eventCategory= category.getText().toString();
-
-
-                time=findViewById(R.id.timeText);
                 String eventTime= time.getText().toString();
-                details= findViewById(R.id.detailsText);
+                String eTime=endTime.getText().toString();
                 String eventDetails= details.getText().toString();
-                author= findViewById(R.id.authorText);
                 String eventAuthor= author.getText().toString();
-                Events e= new Events (eventTitle,eventCategory, date, eventTime, eventDetails);
+                Events e= new Events (eventTitle,eventCategory, date, eventTime, eTime, eventDetails);
                     if(eventTitle.equals("")|| eventCategory.equals("")|| date.equals("") || eventTime.equals("") ){
                     Toast.makeText(getApplicationContext(), "Make Sure Fields aren't Empty", Toast.LENGTH_SHORT).show();
                      }
                      else {
-                        boolean insertCheck=db.insertEvent(eventTitle,eventCategory,date,eventTime,eventDetails,eventAuthor);
+                        boolean insertCheck=db.insertEvent(eventTitle,eventCategory,date,eventTime,eventDetails,eventAuthor, eTime);
                         if(insertCheck){
                             Toast.makeText(getApplicationContext(), "Successfully Posted", Toast.LENGTH_SHORT).show();
                             Intent startIntent = new Intent(getApplicationContext(), HomeFeed.class);

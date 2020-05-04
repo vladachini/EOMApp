@@ -4,22 +4,25 @@ public class Events {
     String title;
     String details;
     String date;
-    String time; //might need to change from int into string later
+    String startTime; //might need to change from int into string later
+    String endTime;
     String category;
     boolean saved = false;
 
-    public Events(String t, String c, String dt, String tm, String d){
+    public Events(String t, String c, String dt, String sTime, String eTime, String d){
         title=t;
         details=d;
         date=dt;
-        time=tm;
+        startTime=sTime;
+        endTime= eTime;
         category=c;
 
     }
-    public Events(String t, String c, String dt, String tm){
+    public Events(String t, String c, String dt, String sTime, String eTime){
         title=t;
         date=dt;
-        time=tm;
+        startTime=sTime;
+        endTime= eTime;
         category=c;
 
     }
@@ -36,8 +39,12 @@ public class Events {
         return details;
     }
 
-    public String getTime() {
-        return time;
+    public String getStartTime() {
+        return startTime;
+    }
+
+    public String getEndTime(){
+        return endTime;
     }
 
     public String getTitle() {
@@ -56,8 +63,11 @@ public class Events {
         this.details = details;
     }
 
-    public void setTime(String time) {
-        this.time = time;
+    public void setStartTime(String time) {
+        this.startTime = time;
+    }
+    public void setEndTime(String time){
+        this.endTime =time;
     }
 
     public void setTitle(String title) {
