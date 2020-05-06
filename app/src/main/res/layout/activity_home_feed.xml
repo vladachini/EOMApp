@@ -6,53 +6,44 @@
     android:layout_height="match_parent"
     tools:context=".HomeFeed">
 
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="414dp"
-        android:layout_height="102dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/round" />
-
     <TextView
         android:id="@+id/textView4"
-        android:layout_width="330dp"
-        android:layout_height="93dp"
-        android:fontFamily="@font/capriola"
-        android:gravity="center"
-        android:text="@string/events_and_announcements"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        android:textColor="#FCCD06"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_width="218dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="Upcoming Events"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        app:layout_constraintBottom_toTopOf="@+id/myListView"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintHorizontal_bias="0.176"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.007" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
         android:id="@+id/myListView"
-        android:layout_width="122dp"
-        android:layout_height="118dp"
-        android:layout_marginTop="12dp"
+        android:layout_width="406dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="0.602" />
+        app:layout_constraintVertical_bias="0.583" />
 
     <Button
         android:id="@+id/createBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Button"
-        tools:layout_editor_absoluteX="174dp"
-        tools:layout_editor_absoluteY="143dp" />
-
+        android:layout_marginStart="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginBottom="16dp"
+        android:text="Post"
+        app:layout_constraintBottom_toTopOf="@+id/myListView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.039" />
 </androidx.constraintlayout.widget.ConstraintLayout>
