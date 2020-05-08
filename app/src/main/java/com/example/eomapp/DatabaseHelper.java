@@ -10,7 +10,7 @@ import android.util.Log;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME="Login.db";
-    private static final int DATABASE_VERSION= 6;
+    private static final int DATABASE_VERSION= 7;
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME,  null,  DATABASE_VERSION);
     }
@@ -28,7 +28,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     @Override
     public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 
-        if(oldVersion<6){
+        if(oldVersion<7){
             db.execSQL("ALTER TABLE Events ADD endTime Text");
         }
 
