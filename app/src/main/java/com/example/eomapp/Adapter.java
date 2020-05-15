@@ -8,6 +8,12 @@ import android.view.ViewGroup;
 import android.widget.CursorAdapter;
 import android.widget.TextView;
 
+import java.text.DateFormat;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Date;
+
 public class Adapter extends CursorAdapter {
     public Adapter(Context context, Cursor cursor) {
         super(context, cursor, 0);
@@ -25,16 +31,17 @@ public class Adapter extends CursorAdapter {
 
         TextView eventTitle = (TextView) view.findViewById(R.id.eventTitle);
         TextView startTime = (TextView) view.findViewById(R.id.startTimeView);
-        TextView endTime= (TextView) view.findViewById(R.id.endTimeView);
-
+        TextView endTime = (TextView) view.findViewById(R.id.endTimeView);
 
         String title = cursor.getString(cursor.getColumnIndexOrThrow("title"));
         String sTime = cursor.getString(cursor.getColumnIndexOrThrow("time"));
-        String eTIme= cursor.getString(cursor.getColumnIndexOrThrow("endTime"));
+        String eTIme = cursor.getString(cursor.getColumnIndexOrThrow("endTime"));
+        String date = cursor.getString(cursor.getColumnIndexOrThrow("date"));
 
         eventTitle.setText(title);
         startTime.setText(sTime);
         endTime.setText(eTIme);
+
     }
 
 }

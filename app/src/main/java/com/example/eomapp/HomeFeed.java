@@ -17,14 +17,15 @@ import java.util.ArrayList;
 public class HomeFeed extends AppCompatActivity {
     private Button post;
     private ListView lv;
-    DatabaseHelper db= new DatabaseHelper(this);
+    DatabaseHelper db = new DatabaseHelper(this);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_feed);
         //type code here
-        post= findViewById(R.id.createBtn);
-        lv= findViewById(R.id.myListView);
+        post = findViewById(R.id.createBtn);
+        lv = findViewById(R.id.myListView);
 
         viewData();
 
@@ -38,16 +39,13 @@ public class HomeFeed extends AppCompatActivity {
 
     }
 
-    public void viewData(){
+    public void viewData() {
         Cursor cursor = db.getEvent();
 
-        if(cursor.getCount()==0){
+        if (cursor.getCount() == 0) {
             Toast.makeText(this, "No Events Happening", Toast.LENGTH_SHORT).show();
-        }
-        else{
-            //while(cursor.moveToNext()){
+        } else {
 
-           // }
             Adapter cursorAdapter = new Adapter(this, cursor);
             lv.setAdapter(cursorAdapter);
         }
