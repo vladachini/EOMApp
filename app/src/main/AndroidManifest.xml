@@ -10,6 +10,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".EventInput"></activity>
+        <activity android:name=".AdminCode"></activity>
+        <activity android:name=".EventInput" />
         <activity android:name=".HomeFeed" />
         <activity android:name=".SignupActivity" />
         <activity android:name=".MainActivity">

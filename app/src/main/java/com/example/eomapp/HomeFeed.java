@@ -17,37 +17,35 @@ import java.util.ArrayList;
 public class HomeFeed extends AppCompatActivity {
     private Button post;
     private ListView lv;
-    DatabaseHelper db= new DatabaseHelper(this);
+    DatabaseHelper db = new DatabaseHelper(this);
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home_feed);
         //type code here
-        post= findViewById(R.id.createBtn);
-        lv= findViewById(R.id.myListView);
+        post = findViewById(R.id.createBtn);
+        lv = findViewById(R.id.myListView);
 
         viewData();
 
         post.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(), EventInput.class);
+                Intent startIntent = new Intent(getApplicationContext(), AdminCode.class);
                 startActivity(startIntent);
             }
         });
 
     }
 
-    public void viewData(){
+    public void viewData() {
         Cursor cursor = db.getEvent();
 
-        if(cursor.getCount()==0){
+        if (cursor.getCount() == 0) {
             Toast.makeText(this, "No Events Happening", Toast.LENGTH_SHORT).show();
-        }
-        else{
-            //while(cursor.moveToNext()){
+        } else {
 
-           // }
             Adapter cursorAdapter = new Adapter(this, cursor);
             lv.setAdapter(cursorAdapter);
         }
