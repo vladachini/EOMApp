@@ -82,7 +82,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
     public Cursor getEvent() {
         SQLiteDatabase db = this.getReadableDatabase();
-        String query = ("SELECT * from Events where dateTime >= strftime('%s','now')");
+        String query = ("SELECT * from Events where dateTime >= strftime('%s','now') order by datetime asc");
         Cursor cursor = db.rawQuery(query, null);
         return cursor;
     }

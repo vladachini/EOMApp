@@ -32,7 +32,7 @@ public class HomeFeed extends AppCompatActivity {
         post.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(), EventInput.class);
+                Intent startIntent = new Intent(getApplicationContext(), AdminCode.class);
                 startActivity(startIntent);
             }
         });
