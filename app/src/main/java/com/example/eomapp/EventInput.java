@@ -56,7 +56,7 @@ public class EventInput extends AppCompatActivity implements AdapterView.OnItemS
         datePicker = findViewById(R.id.datePicker);
         title = findViewById(R.id.titleText);
         category = findViewById(R.id.category);
-        time = findViewById(R.id.timeText);
+        time = findViewById(R.id.startTextView);
         details = findViewById(R.id.detailsText);
         author = findViewById(R.id.authorText);
         endTime = findViewById(R.id.endTime);

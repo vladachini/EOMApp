@@ -32,11 +32,7 @@
         app:layout_constraintTop_toBottomOf="@+id/authorText"
         app:layout_constraintVertical_bias="0.645" />
 
-    <EditText
-        android:id="@+id/titleText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-<<<<<<< HEAD
+    <<<<<<< HEAD
         android:ems="10"
         android:hint="Title"
         android:inputType="textPersonName"
@@ -47,11 +43,13 @@
         android:id="@+id/categoryText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
         android:ems="10"
         android:hint="Category"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="181dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="202dp" />
 
     <EditText
 =======
@@ -104,17 +102,18 @@
         android:textAppearance="@style/TextAppearance.AppCompat.Display2"
         android:textColor="#FCCD06"
         android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/titleText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.307" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/datePicker"
         android:layout_width="202dp"
         android:layout_height="38dp"
-<<<<<<< HEAD
+        tools:layout_editor_absoluteX="146dp"
+        tools:layout_editor_absoluteY="306dp" />
+
+    <<<<<<< HEAD
         android:text="Select A Date"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="234dp" />
@@ -145,16 +144,12 @@
         android:layout_height="26dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"
-        android:layout_marginTop="24dp"
         android:layout_marginEnd="1dp"
         android:layout_marginRight="1dp"
-        android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toTopOf="@+id/datePicker"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.547"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleText"
-        app:layout_constraintVertical_bias="0.08" />
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
         android:id="@+id/textView3"
@@ -162,14 +157,20 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="61dp"
         android:layout_marginLeft="61dp"
-        android:layout_marginTop="31dp"
         android:layout_marginEnd="6dp"
         android:layout_marginRight="6dp"
         android:layout_marginBottom="40dp"
         android:text="Category"
         app:layout_constraintBottom_toTopOf="@+id/datePicker"
         app:layout_constraintEnd_toStartOf="@+id/category"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleText" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/startTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="52dp"
+        tools:layout_editor_absoluteY="248dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
