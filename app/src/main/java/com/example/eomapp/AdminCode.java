@@ -13,7 +13,7 @@ public class AdminCode extends AppCompatActivity {
     private EditText adminText;
     private Button go;
     private String admin;
-    private String adminKey;
+    private String adminKey="a1b2c3";
     private Button back;
 
     @Override
@@ -23,11 +23,10 @@ public class AdminCode extends AppCompatActivity {
         adminText=findViewById(R.id.adminText);
         go= findViewById(R.id.enterButton);
         back=findViewById(R.id.backButton);
-        admin= adminText.getText().toString();
-        adminKey="a1b2c3";
         go.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                admin= adminText.getText().toString();
                 if(admin.equals(adminKey)){
                     Intent startIntent = new Intent(getApplicationContext(), EventInput.class);
                     startActivity(startIntent);

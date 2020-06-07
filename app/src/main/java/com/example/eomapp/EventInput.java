@@ -84,7 +84,7 @@ public class EventInput extends AppCompatActivity implements AdapterView.OnItemS
                 };
                 sTimePicker = new TimePickerDialog(EventInput.this,
                         android.R.style.Theme_Holo_Light_Dialog_MinWidth, sListener,
-                        hour1, minute1, true);
+                        hour1, minute1, false);
                 sTimePicker.show();
             }
         });
@@ -105,7 +105,7 @@ public class EventInput extends AppCompatActivity implements AdapterView.OnItemS
                 };
                 eTimePicker = new TimePickerDialog(EventInput.this,
                         android.R.style.Theme_Holo_Light_Dialog_MinWidth, eListener,
-                        hour2, minute2, true);
+                        hour2, minute2, false);
                 eTimePicker.show();
             }
         });

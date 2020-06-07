@@ -13,6 +13,7 @@ import java.util.Date;
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "Login.db";
     private static final int DATABASE_VERSION = 10;
+    private String details=("No Details");
 
     public DatabaseHelper(Context context) {
         super(context, DATABASE_NAME, null, DATABASE_VERSION);
@@ -86,6 +87,25 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         Cursor cursor = db.rawQuery(query, null);
         return cursor;
     }
+    public Cursor getSports() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = ("SELECT * from Events where dateTime >= strftime('%s','now') and category = ('Sports') order by datetime asc");
+        Cursor cursor = db.rawQuery(query, null);
+        return cursor;
+    }
+    public Cursor getArts() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = ("SELECT * from Events where dateTime >= strftime('%s','now') and category = 'Arts' order by datetime asc");
+        Cursor cursor = db.rawQuery(query, null);
+        return cursor;
+    }
+    public Cursor getClub() {
+        SQLiteDatabase db = this.getReadableDatabase();
+        String query = ("SELECT * from Events where dateTime >= strftime('%s','now') and category = 'Club' order by datetime asc");
+        Cursor cursor = db.rawQuery(query, null);
+        return cursor;
+    }
+
 
     //checking if email exists
     public Boolean checkemail(String email) {
@@ -103,5 +123,20 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         } else {
             return false;
         }
+    }
+    public String getDetails (Cursor cursor, int position){
+        cursor.moveToPosition(position);
+        details = cursor.getString(cursor.getColumnIndexOrThrow("details"));
+        return details;
+    }
+    public String getStartTime (Cursor cursor, int position) {
+        cursor.moveToPosition(position);
+        String sTime = cursor.getString(cursor.getColumnIndexOrThrow("time"));
+        return sTime;
+    }
+    public String getEndTime (Cursor cursor, int position) {
+        cursor.moveToPosition(position);
+        String eTime = cursor.getString(cursor.getColumnIndexOrThrow("endTime"));
+        return eTime;
     }
 }

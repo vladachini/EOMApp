@@ -15,6 +15,7 @@ import java.util.Calendar;
 import java.util.Date;
 
 public class Adapter extends CursorAdapter {
+
     public Adapter(Context context, Cursor cursor) {
         super(context, cursor, 0);
     }
@@ -30,18 +31,22 @@ public class Adapter extends CursorAdapter {
     public void bindView(View view, Context context, Cursor cursor) {
 
         TextView eventTitle = (TextView) view.findViewById(R.id.eventTitle);
-        TextView startTime = (TextView) view.findViewById(R.id.startTimeView);
-        TextView endTime = (TextView) view.findViewById(R.id.endTimeView);
+        TextView dateView = (TextView) view.findViewById(R.id.startTimeView);
+        TextView startTime = (TextView) view.findViewById(R.id.endTimeView);
+        TextView idView= view.findViewById(R.id.idView);
 
         String title = cursor.getString(cursor.getColumnIndexOrThrow("title"));
         String sTime = cursor.getString(cursor.getColumnIndexOrThrow("time"));
         String eTIme = cursor.getString(cursor.getColumnIndexOrThrow("endTime"));
         String date = cursor.getString(cursor.getColumnIndexOrThrow("date"));
-
         eventTitle.setText(title);
-        startTime.setText(sTime);
-        endTime.setText(eTIme);
+        dateView.setText(date);
+        startTime.setText("Event Start: " + sTime);
+
 
     }
 
-}
+
+    }
+
+
