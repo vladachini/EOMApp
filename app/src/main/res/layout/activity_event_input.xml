@@ -30,10 +30,11 @@
         app:layout_constraintHorizontal_bias="0.888"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/authorText"
-        app:layout_constraintVertical_bias="0.645" />
+        app:layout_constraintVertical_bias="0.826" />
 
     <EditText
         android:id="@+id/titleText"
+<<<<<<< HEAD
         android:layout_width="112dp"
         android:layout_height="48dp"
         tools:layout_editor_absoluteX="28dp"
@@ -52,6 +53,14 @@
     <
 
     < HEAD
+=======
+        android:layout_width="182dp"
+        android:layout_height="42dp"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="125dp" />
+
+    <<<<<<< HEAD
+>>>>>>> d32f409fbfca088bfed1f195328f415367ef7cd6
         android:ems="10"
         android:hint="Title"
         android:inputType="textPersonName"
