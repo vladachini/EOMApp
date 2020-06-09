@@ -59,6 +59,7 @@
         tools:layout_editor_absoluteY="104dp" />
 
     <EditText
+<<<<<<< HEAD
     =======
     android:layout_marginTop="104dp"
     android:ems="10"
@@ -83,6 +84,33 @@
 
 
     ]]>
+=======
+=======
+        android:layout_marginTop="104dp"
+        android:ems="10"
+        android:hint="Title"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+><![CDATA[>>>>>> 77f53e26c89f35fe5d29dc48f08c32839c5237ba
+        android:id="@+id/timeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Start Time"
+        android:inputType="time"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="288dp" />
+>>>>>>> d32f409fbfca088bfed1f195328f415367ef7cd6
+
+
+
+
+
+    ]]>
 
     <EditText
         android:id="@+id/detailsText"
@@ -91,21 +119,31 @@
         android:ems="10"
         android:hint="Details"
         android:inputType="textPersonName"
+<<<<<<< HEAD
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="461dp" />
+=======
+        tools:layout_editor_absoluteX="39dp"
+        tools:layout_editor_absoluteY="483dp" />
+>>>>>>> d32f409fbfca088bfed1f195328f415367ef7cd6
 
     <EditText
         android:id="@+id/authorText"
-        android:layout_width="252dp"
-        android:layout_height="76dp"
+        android:layout_width="208dp"
+        android:layout_height="48dp"
         android:ems="10"
         android:hint="Your email"
         android:inputType="textPersonName"
         android:textSize="36sp"
+<<<<<<< HEAD
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.838"
         tools:layout_editor_absoluteX="16dp" />
+=======
+        tools:layout_editor_absoluteX="60dp"
+        tools:layout_editor_absoluteY="560dp" />
+>>>>>>> d32f409fbfca088bfed1f195328f415367ef7cd6
 
     <TextView
         android:id="@+id/textView5"
@@ -118,6 +156,7 @@
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/titleText"
         app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
         app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -143,6 +182,27 @@
     <
 
     < HEAD
+=======
+        app:layout_constraintHorizontal_bias="0.634"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/datePicker"
+        android:layout_width="202dp"
+        android:layout_height="38dp"
+        tools:layout_editor_absoluteX="104dp"
+        tools:layout_editor_absoluteY="267dp" />
+
+    <<<<<<< HEAD
+        android:text="Select A Date"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="234dp" /><![CDATA[
+=======
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp"
+>>>>>>> d32f409fbfca088bfed1f195328f415367ef7cd6
         android:text="Select A Date"
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="234dp" /><![CDATA[
@@ -159,6 +219,26 @@
 
     ]]>
 
+
+
+
+
+
+
+
+
+    ]]>
+
+    <TextView
+        android:id="@+id/timeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Start Time"
+        android:inputType="time"
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="356dp" />
+
     <TextView
         android:id="@+id/endTime"
         android:layout_width="wrap_content"
@@ -166,8 +246,13 @@
         android:ems="10"
         android:hint="End Time"
         android:inputType="time"
+<<<<<<< HEAD
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="337dp" />
+=======
+        tools:layout_editor_absoluteX="80dp"
+        tools:layout_editor_absoluteY="401dp" />
+>>>>>>> d32f409fbfca088bfed1f195328f415367ef7cd6
 
     <Spinner
         android:id="@+id/category"
@@ -181,17 +266,51 @@
         android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toTopOf="@+id/datePicker"
         app:layout_constraintEnd_toEndOf="parent"
+<<<<<<< HEAD
         app:layout_constraintHorizontal_bias="0.286"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleText"
         app:layout_constraintVertical_bias="0.508" />
+=======
+        app:layout_constraintHorizontal_bias="0.489"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleText"
+        app:layout_constraintVertical_bias="0.35" />
+>>>>>>> d32f409fbfca088bfed1f195328f415367ef7cd6
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Category"
+<<<<<<< HEAD
         tools:layout_editor_absoluteX="296dp"
         tools:layout_editor_absoluteY="421dp" />
+=======
+        app:layout_constraintBottom_toTopOf="@+id/datePicker"
+        app:layout_constraintEnd_toStartOf="@+id/category"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleText"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pick a Date:"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="279dp" />
+
+    <EditText
+        android:id="@+id/placeText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Enter The Location"
+        android:inputType="textPersonName"
+        tools:layout_editor_absoluteX="67dp"
+        tools:layout_editor_absoluteY="432dp" />
+>>>>>>> d32f409fbfca088bfed1f195328f415367ef7cd6
 
 </androidx.constraintlayout.widget.ConstraintLayout>
