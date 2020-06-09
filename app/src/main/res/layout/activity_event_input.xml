@@ -34,9 +34,24 @@
 
     <EditText
         android:id="@+id/titleText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-<<<<<<< HEAD
+        android:layout_width="112dp"
+        android:layout_height="48dp"
+        tools:layout_editor_absoluteX="28dp"
+        tools:layout_editor_absoluteY="90dp" />
+
+    <
+
+    <
+
+    <
+
+    <
+
+    <
+
+    <
+
+    < HEAD
         android:ems="10"
         android:hint="Title"
         android:inputType="textPersonName"
@@ -44,35 +59,30 @@
         tools:layout_editor_absoluteY="104dp" />
 
     <EditText
-        android:id="@+id/categoryText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Category"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="181dp" />
+    =======
+    android:layout_marginTop="104dp"
+    android:ems="10"
+    android:hint="Title"
+    android:inputType="textPersonName"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toTopOf="parent" />
 
-    <EditText
-=======
-        android:layout_marginTop="104dp"
-        android:ems="10"
-        android:hint="Title"
-        android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    <TextView><![CDATA[>>>>>> 77f53e26c89f35fe5d29dc48f08c32839c5237ba
+    android:id="@+id/timeText"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:ems="10"
+    android:hint="Start Time"
+    android:inputType="time"
+    tools:layout_editor_absoluteX="16dp"
+    tools:layout_editor_absoluteY="288dp" />
 
-    <TextView
->>>>>>> 77f53e26c89f35fe5d29dc48f08c32839c5237ba
-        android:id="@+id/timeText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Start Time"
-        android:inputType="time"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="288dp" />
+
+
+
+
+    ]]>
 
     <EditText
         android:id="@+id/detailsText"
@@ -82,7 +92,7 @@
         android:hint="Details"
         android:inputType="textPersonName"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="385dp" />
+        tools:layout_editor_absoluteY="461dp" />
 
     <EditText
         android:id="@+id/authorText"
@@ -92,8 +102,10 @@
         android:hint="Your email"
         android:inputType="textPersonName"
         android:textSize="36sp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="490dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.838"
+        tools:layout_editor_absoluteX="16dp" />
 
     <TextView
         android:id="@+id/textView5"
@@ -106,28 +118,46 @@
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/titleText"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.307" />
+        app:layout_constraintVertical_bias="0.028" />
 
     <TextView
         android:id="@+id/datePicker"
-        android:layout_width="202dp"
-        android:layout_height="38dp"
-<<<<<<< HEAD
+        android:layout_width="213dp"
+        android:layout_height="52dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="252dp" />
+
+    <
+
+    <
+
+    <
+
+    <
+
+    <
+
+    <
+
+    < HEAD
         android:text="Select A Date"
         tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="234dp" />
-=======
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="8dp"
-        android:text="Select A Date"
-        app:layout_constraintBottom_toTopOf="@+id/timeText"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.473"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/category" />
->>>>>>> 77f53e26c89f35fe5d29dc48f08c32839c5237ba
+        tools:layout_editor_absoluteY="234dp" /><![CDATA[
+    =======
+    android:layout_marginTop="16dp"
+    android:layout_marginBottom="8dp"
+    android:text="Select A Date"
+    app:layout_constraintBottom_toTopOf="@+id/timeText"
+    app:layout_constraintEnd_toEndOf="parent"
+    app:layout_constraintHorizontal_bias="0.473"
+    app:layout_constraintStart_toStartOf="parent"
+    app:layout_constraintTop_toBottomOf="@+id/category" />
+    >>>>>>> 77f53e26c89f35fe5d29dc48f08c32839c5237ba
+
+    ]]>
 
     <TextView
         android:id="@+id/endTime"
@@ -136,7 +166,7 @@
         android:ems="10"
         android:hint="End Time"
         android:inputType="time"
-        tools:layout_editor_absoluteX="5dp"
+        tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="337dp" />
 
     <Spinner
@@ -151,25 +181,17 @@
         android:layout_marginBottom="24dp"
         app:layout_constraintBottom_toTopOf="@+id/datePicker"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.547"
+        app:layout_constraintHorizontal_bias="0.286"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleText"
-        app:layout_constraintVertical_bias="0.08" />
+        app:layout_constraintVertical_bias="0.508" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="61dp"
-        android:layout_marginLeft="61dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="6dp"
-        android:layout_marginRight="6dp"
-        android:layout_marginBottom="40dp"
         android:text="Category"
-        app:layout_constraintBottom_toTopOf="@+id/datePicker"
-        app:layout_constraintEnd_toStartOf="@+id/category"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleText" />
+        tools:layout_editor_absoluteX="296dp"
+        tools:layout_editor_absoluteY="421dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
