@@ -4,19 +4,51 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".EventInput">
+    tools:context=".EventInput"
+    tools:ignore="ExtraText">
+
+    <EditText
+        android:id="@+id/titleText"
+        android:layout_width="237dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="21dp"
+        android:autofillHints=""
+        android:hint="@string/event_title"
+        android:inputType="textShortMessage"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.091"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView" />
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="414dp"
-        android:layout_height="79dp"
+        android:layout_width="463dp"
+        android:layout_height="70dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintHorizontal_bias="0.666"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
-        app:srcCompat="@drawable/round" />
+        app:srcCompat="@drawable/banner" />
+
+    <TextView
+        android:id="@+id/CreateAnEvent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/capriola"
+        android:text="@string/create_an_event"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+        android:textColor="#FCCD06"
+        android:textSize="36sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintHorizontal_bias="0.444"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/postBtn"
@@ -24,51 +56,14 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:layout_marginBottom="44dp"
-        android:text="Post"
+        android:text="@string/post"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.888"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/authorText"
-        app:layout_constraintVertical_bias="0.826" />
+        app:layout_constraintVertical_bias="0.826" /><![CDATA[
 
-    <EditText
-        android:id="@+id/titleText"
-<<<<<<< HEAD
-        android:layout_width="112dp"
-        android:layout_height="48dp"
-        tools:layout_editor_absoluteX="28dp"
-        tools:layout_editor_absoluteY="90dp" />
-
-    <
-
-    <
-
-    <
-
-    <
-
-    <
-
-    <
-
-    < HEAD
-=======
-        android:layout_width="182dp"
-        android:layout_height="42dp"
-        tools:layout_editor_absoluteX="70dp"
-        tools:layout_editor_absoluteY="125dp" />
-
-    <<<<<<< HEAD
->>>>>>> d32f409fbfca088bfed1f195328f415367ef7cd6
-        android:ems="10"
-        android:hint="Title"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="104dp" />
-
-    <EditText
-<<<<<<< HEAD
     =======
     android:layout_marginTop="104dp"
     android:ems="10"
@@ -78,7 +73,9 @@
     app:layout_constraintStart_toStartOf="parent"
     app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView><![CDATA[>>>>>> 77f53e26c89f35fe5d29dc48f08c32839c5237ba
+
+
+    >>>>>> 77f53e26c89f35fe5d29dc48f08c32839c5237ba
     android:id="@+id/timeText"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
@@ -92,7 +89,7 @@
 
 
 
-    ]]>
+
 =======
 =======
         android:layout_marginTop="104dp"
@@ -103,8 +100,9 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-><![CDATA[>>>>>> 77f53e26c89f35fe5d29dc48f08c32839c5237ba
+
+
+    >>>>>> 77f53e26c89f35fe5d29dc48f08c32839c5237ba
         android:id="@+id/timeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -119,95 +117,69 @@
 
 
 
-    ]]>
 
-    <EditText
-        android:id="@+id/detailsText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Details"
-        android:inputType="textPersonName"
-<<<<<<< HEAD
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="461dp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 =======
         tools:layout_editor_absoluteX="39dp"
         tools:layout_editor_absoluteY="483dp" />
 >>>>>>> d32f409fbfca088bfed1f195328f415367ef7cd6
 
-    <EditText
-        android:id="@+id/authorText"
-        android:layout_width="208dp"
-        android:layout_height="48dp"
-        android:ems="10"
-        android:hint="Your email"
-        android:inputType="textPersonName"
-        android:textSize="36sp"
-<<<<<<< HEAD
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.838"
-        tools:layout_editor_absoluteX="16dp" />
-=======
-        tools:layout_editor_absoluteX="60dp"
-        tools:layout_editor_absoluteY="560dp" />
->>>>>>> d32f409fbfca088bfed1f195328f415367ef7cd6
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:fontFamily="@font/capriola"
-        android:text="@string/create_an_event"
-        android:textAppearance="@style/TextAppearance.AppCompat.Display2"
-        android:textColor="#FCCD06"
-        android:textSize="36sp"
-        app:layout_constraintBottom_toTopOf="@+id/titleText"
-        app:layout_constraintEnd_toEndOf="parent"
-<<<<<<< HEAD
-        app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.028" />
 
-    <TextView
-        android:id="@+id/datePicker"
-        android:layout_width="213dp"
-        android:layout_height="52dp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="252dp" />
 
-    <
 
-    <
 
-    <
 
-    <
 
-    <
 
-    <
 
-    < HEAD
-=======
-        app:layout_constraintHorizontal_bias="0.634"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
 
-    <TextView
-        android:id="@+id/datePicker"
-        android:layout_width="202dp"
-        android:layout_height="38dp"
-        tools:layout_editor_absoluteX="104dp"
-        tools:layout_editor_absoluteY="267dp" />
 
-    <<<<<<< HEAD
-        android:text="Select A Date"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="234dp" /><![CDATA[
+
+
+
+
+
+
+
+
 =======
         android:layout_marginTop="16dp"
         android:layout_marginBottom="8dp"
@@ -226,7 +198,6 @@
     app:layout_constraintTop_toBottomOf="@+id/category" />
     >>>>>>> 77f53e26c89f35fe5d29dc48f08c32839c5237ba
 
-    ]]>
 
 
 
@@ -236,50 +207,39 @@
 
 
 
-    ]]>
 
-    <TextView
-        android:id="@+id/timeText"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Start Time"
-        android:inputType="time"
-        tools:layout_editor_absoluteX="80dp"
-        tools:layout_editor_absoluteY="356dp" />
 
-    <TextView
-        android:id="@+id/endTime"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="End Time"
-        android:inputType="time"
-<<<<<<< HEAD
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="337dp" />
-=======
+
+
+
+
+
+
+
+
+
+
+
+
+
+    =======
         tools:layout_editor_absoluteX="80dp"
         tools:layout_editor_absoluteY="401dp" />
 >>>>>>> d32f409fbfca088bfed1f195328f415367ef7cd6
 
-    <Spinner
-        android:id="@+id/category"
-        android:layout_width="153dp"
-        android:layout_height="26dp"
-        android:layout_marginStart="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="24dp"
-        android:layout_marginEnd="1dp"
-        android:layout_marginRight="1dp"
-        android:layout_marginBottom="24dp"
-        app:layout_constraintBottom_toTopOf="@+id/datePicker"
-        app:layout_constraintEnd_toEndOf="parent"
-<<<<<<< HEAD
-        app:layout_constraintHorizontal_bias="0.286"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/titleText"
-        app:layout_constraintVertical_bias="0.508" />
+
+
+
+
+
+
+
+
+
+
+
+
+
 =======
         app:layout_constraintHorizontal_bias="0.489"
         app:layout_constraintStart_toStartOf="parent"
@@ -287,14 +247,19 @@
         app:layout_constraintVertical_bias="0.35" />
 >>>>>>> d32f409fbfca088bfed1f195328f415367ef7cd6
 
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Category"
-<<<<<<< HEAD
-        tools:layout_editor_absoluteX="296dp"
-        tools:layout_editor_absoluteY="421dp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
 =======
         app:layout_constraintBottom_toTopOf="@+id/datePicker"
         app:layout_constraintEnd_toStartOf="@+id/category"
@@ -303,23 +268,136 @@
         app:layout_constraintTop_toBottomOf="@+id/titleText"
         app:layout_constraintVertical_bias="0.0" />
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    ]]>
+
+
+
+    <EditText
+        android:id="@+id/detailsText"
+        android:layout_width="235dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="20dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/description"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.09"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/titleText" />
+
+    <EditText
+        android:id="@+id/authorText"
+        android:layout_width="208dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="20dp"
+        android:autofillHints=""
+        android:ems="10"
+        android:hint="@string/your_email"
+        android:inputType="textPersonName"
+        android:textSize="36sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/category" />
+
+    <TextView
+        android:id="@+id/datePicker"
+        android:layout_width="217dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.082"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
+
+    <TextView
+        android:id="@+id/endTime"
+        android:layout_width="206dp"
+        android:layout_height="46dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/end_time"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.078"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/timeText" />
+
+    <Spinner
+        android:id="@+id/category"
+        android:layout_width="153dp"
+        android:layout_height="26dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.062"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/category"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.045"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/datePicker" />
+
     <TextView
         android:id="@+id/textView10"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Pick a Date:"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="279dp" />
+        android:layout_marginTop="20dp"
+        android:text="@string/pick_a_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.057"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/placeText" />
 
     <EditText
         android:id="@+id/placeText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:autofillHints=""
         android:ems="10"
-        android:hint="Enter The Location"
+        android:hint="@string/enter_the_location"
         android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="67dp"
-        tools:layout_editor_absoluteY="432dp" />
->>>>>>> d32f409fbfca088bfed1f195328f415367ef7cd6
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/endTime" />
+
+    <TextView
+        android:id="@+id/timeText"
+        android:layout_width="216dp"
+        android:layout_height="48dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:hint="@string/start_time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailsText" />
+    >>>>>>> d32f409fbfca088bfed1f195328f415367ef7cd6
 
 </androidx.constraintlayout.widget.ConstraintLayout>

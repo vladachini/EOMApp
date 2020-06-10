@@ -113,6 +113,18 @@
     <string name="to_the">TO THE</string>
     <string name="events_and_announcements">Events and Announcements</string>
     <string name="create_an_event">Create an Event</string>
+    <string name="description">Description</string>
+    <string name="post">Post</string>
+    <string name="your_email">Your email</string>
+    <string name="select_a_date" />
+    <string name="start_time">Start Time</string>
 
-
+    <string name="enter_the_location">Where?</string>
+    <string name="end_time">End Time</string>
+    <string name="category">Category</string>
+    <string name="pick_a_date">When?</string>
+    <string name="event_title">Title of the event</string>
+    <string name = "enterAdmin"> Enter your admin key</string>
+    <string name = "enter"> Enter</string>
+    <string name = "back"> Back</string>
 </resources>

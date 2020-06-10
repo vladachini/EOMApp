@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <item name="signUp2" type="id" />
+    <item name="titleText" type="id" />
 
 </resources>

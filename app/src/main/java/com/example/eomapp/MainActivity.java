@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
         p1 = findViewById(R.id.passwordText);
 
 
-        TextView signUp = findViewById(R.id.textView5);
+        TextView signUp = findViewById(R.id.CreateAnEvent);
         signUp.setPaintFlags(signUp.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
         Button login = findViewById(R.id.loginButton);
         db = new DatabaseHelper(this);
