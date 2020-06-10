@@ -45,6 +45,7 @@ public class EventInput extends AppCompatActivity implements AdapterView.OnItemS
     private TimePickerDialog.OnTimeSetListener sListener;
     private TimePickerDialog.OnTimeSetListener eListener;
     long seconds;
+    private EditText placesText;
 
 
     DatabaseHelper db = new DatabaseHelper(this);
@@ -60,13 +61,12 @@ public class EventInput extends AppCompatActivity implements AdapterView.OnItemS
         details = findViewById(R.id.detailsText);
         author = findViewById(R.id.authorText);
         endTime = findViewById(R.id.endTime);
-
-        String[] categories = new String[]{"Sports", "Arts", "Club", "School Spirit", "Other"};
+        placesText= findViewById(R.id.placeText);
+        String[] categories = new String[]{"Sports", "Arts", "Club", "Other"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, categories);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         category.setAdapter(adapter);
         category.setOnItemSelectedListener(this);
-
         time.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -134,7 +134,6 @@ public class EventInput extends AppCompatActivity implements AdapterView.OnItemS
             }
         });
 
-
         post = findViewById(R.id.postBtn);
         post.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -145,7 +144,7 @@ public class EventInput extends AppCompatActivity implements AdapterView.OnItemS
                 String eTime = endTime.getText().toString();
                 String eventDetails = details.getText().toString();
                 String eventAuthor = author.getText().toString();
-
+                String place= placesText.getText().toString();
                 String dateTime = date + " " + stringTime;
                 DateFormat sdf = new SimpleDateFormat("MM/dd/yyyy hh:mm:ss");
                 try {
@@ -158,7 +157,7 @@ public class EventInput extends AppCompatActivity implements AdapterView.OnItemS
                 if (eventTitle.equals("") || eventCategory.equals("") || date.equals("") || eventTime.equals("")) {
                     Toast.makeText(getApplicationContext(), "Make Sure Fields aren't Empty", Toast.LENGTH_SHORT).show();
                 } else {
-                    boolean insertCheck = db.insertEvent(eventTitle, eventCategory, date, eventTime, eventDetails, eventAuthor, eTime, seconds);
+                    boolean insertCheck = db.insertEvent(eventTitle, eventCategory, date, eventTime, eventDetails, eventAuthor, eTime, seconds,place);
                     if (insertCheck) {
                         Toast.makeText(getApplicationContext(), "Successfully Posted", Toast.LENGTH_SHORT).show();
                         Intent startIntent = new Intent(getApplicationContext(), HomeFeed.class);
@@ -170,8 +169,6 @@ public class EventInput extends AppCompatActivity implements AdapterView.OnItemS
                 }
             }
         });
-
-
     }
 
 

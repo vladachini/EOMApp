@@ -15,7 +15,9 @@ public class AdminCode extends AppCompatActivity {
     private String admin;
     private String adminKey="a1b2c3";
     private Button back;
-
+    String activity="post";
+    int id;
+    DatabaseHelper db= new DatabaseHelper(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,13 +25,25 @@ public class AdminCode extends AppCompatActivity {
         adminText=findViewById(R.id.adminText);
         go= findViewById(R.id.enterButton);
         back=findViewById(R.id.backButton);
+        Intent intent=getIntent();
+        Bundle extras = intent.getExtras();
+        activity= extras.getString("activity");
+        id=extras.getInt("id");
         go.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 admin= adminText.getText().toString();
                 if(admin.equals(adminKey)){
-                    Intent startIntent = new Intent(getApplicationContext(), EventInput.class);
-                    startActivity(startIntent);
+                    if(activity.equals("DetailsPage")) {
+                        db.deleteEvent(id);
+                        Toast.makeText(getApplicationContext(), "Successfully Deleted Event ", Toast.LENGTH_SHORT).show();
+                        Intent startIntent = new Intent(getApplicationContext(), HomeFeed.class);
+                        startActivity(startIntent);
+                    }
+                    else{
+                        Intent startIntent = new Intent(getApplicationContext(), EventInput.class);
+                        startActivity(startIntent);
+                    }
                 }
                 else{
                     Toast.makeText(getApplicationContext(), "Code is Not Correct", Toast.LENGTH_SHORT).show();
