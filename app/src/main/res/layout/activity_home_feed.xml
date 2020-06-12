@@ -55,8 +55,10 @@
         android:layout_height="wrap_content"
         android:background="#007F61"
         android:text="settings"
-        tools:layout_editor_absoluteX="3dp"
-        tools:layout_editor_absoluteY="12dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.023"
+        tools:layout_editor_absoluteX="0dp" />
 
     <Spinner
         android:id="@+id/filters"
@@ -73,7 +75,7 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView4"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintVertical_bias="0.153" />
 
     <Button
         android:id="@+id/createBtn"
