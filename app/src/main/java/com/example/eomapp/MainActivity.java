@@ -24,7 +24,7 @@ public class MainActivity extends AppCompatActivity {
     private SharedPreferences loginPreferences;
     private SharedPreferences.Editor loginPrefsEditor;
     private Boolean saveLogin;
-
+    TextView signUp;
     DatabaseHelper db;
 
     @Override
@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
             p1.setText(loginPreferences.getString("password", ""));
             saveLoginCheckBox.setChecked(true);
         }
-        TextView signUp = findViewById(R.id.textView5);
+        signUp = findViewById(R.id.signUp);
         //signUp.setPaintFlags(signUp.getPaintFlags() | UNDERLINE_TEXT_FLAG);
         Button login = findViewById(R.id.loginButton);
         db = new DatabaseHelper(this);

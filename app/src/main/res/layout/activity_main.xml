@@ -107,7 +107,7 @@
         app:srcCompat="@drawable/lion" />
 
     <TextView
-        android:id="@+id/CreateAnEvent"
+        android:id="@+id/signUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"

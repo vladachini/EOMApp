@@ -111,12 +111,16 @@
     <string name="confirm_password">\ \ Confirm Password</string>
     <string name="welcomeonly">\  WELCOME\</string>
     <string name="to_the">TO THE</string>
-    <string name="events_and_announcements">Events and Announcements</string>
+    <string name="events_and_announcements">  \ \ \ \    \Events and Announcements</string>
     <string name="create_an_event">Create an Event</string>
     <string name="Remember_Me">Remember Me</string>
-    <string name="enterAdmin" />
-    <string name="enter" />
-    <string name="back" />
+    <string name="enterAdmin"> Enter your admin key</string>
+    <string name="enter" > Enter </string>
+    <string name="back" > Back </string>
+    <string name="post" > Post an Event </string>
+    <string name="event">Event</string>
+    <string name="end_time">To:</string>
+    <string name="from">From:</string>
 
 
 </resources>

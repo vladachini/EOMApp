@@ -19,7 +19,7 @@
         android:layout_marginEnd="225dp"
         android:layout_marginRight="225dp"
         android:layout_marginBottom="32dp"
-        android:text="Event"
+        android:text="@string/event"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
     <TextView
@@ -37,7 +37,7 @@
         android:layout_marginEnd="2dp"
         android:layout_marginRight="7dp"
 
-        android:text="Time:"
+        android:text="@string/from"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
     <TextView
@@ -54,8 +54,7 @@
         android:layout_marginTop="17dp"
         android:layout_marginEnd="7dp"
         android:layout_marginRight="7dp"
-        android:layout_marginBottom="32dp"
-        android:text="End Time"
+        android:text="@string/end_time"
         android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
 
     <TextView
@@ -63,5 +62,13 @@
         android:layout_width="58dp"
         android:layout_height="wrap_content"
         tools:visibility="invisible" />
+
+    <ImageView
+        android:id="@+id/imageView15"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="461dp"
+        app:srcCompat="@drawable/dottedline" />
 
 </RelativeLayout>
