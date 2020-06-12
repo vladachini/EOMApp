@@ -32,12 +32,12 @@
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="-5dp"
-        android:layout_marginLeft="-5dp"
-        android:layout_marginTop="15dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginRight="0dp"
-        android:layout_marginBottom="159dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginLeft="9dp"
+        android:layout_marginTop="-259dp"
+        android:layout_marginEnd="-12dp"
+        android:layout_marginRight="-12dp"
+        android:layout_marginBottom="435dp"
         android:contentDescription="TODO"
         app:srcCompat="@drawable/dottedline" />
 

@@ -58,7 +58,7 @@ public class HomeFeed extends AppCompatActivity implements AdapterView.OnItemSel
             }
         });
 
-        String[] filters = new String[]{"None", "Arts", "Club", "Sports"};
+        String[] filters = new String[]{"Filter", "Arts", "Club", "Sports"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, filters);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         filter.setAdapter(adapter);
@@ -88,7 +88,7 @@ public class HomeFeed extends AppCompatActivity implements AdapterView.OnItemSel
     }
     public void getFilter(){
 
-        if(chosenFilter.equals("None")){
+        if(chosenFilter.equals("Filter")){
             viewData();
         }
         else if (chosenFilter.equals("Sports")){
