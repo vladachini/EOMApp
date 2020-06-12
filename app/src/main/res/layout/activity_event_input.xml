@@ -313,7 +313,7 @@
         android:ems="10"
         android:hint="@string/your_email"
         android:inputType="textPersonName"
-        android:textSize="36sp"
+        android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.078"
         app:layout_constraintStart_toStartOf="parent"
