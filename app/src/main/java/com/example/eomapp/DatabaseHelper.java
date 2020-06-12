@@ -12,7 +12,7 @@ import java.util.Date;
 
 public class DatabaseHelper extends SQLiteOpenHelper {
     private static final String DATABASE_NAME = "Login.db";
-    private static final int DATABASE_VERSION = 10;
+    private static final int DATABASE_VERSION = 11;
     private String details=("No Details");
 
     public DatabaseHelper(Context context) {
@@ -47,6 +47,10 @@ public class DatabaseHelper extends SQLiteOpenHelper {
                     "category text not null, date text not null, time text not null, " +
                     "details text, author text,endTime text, dateTime long )");
         }
+        if (oldVersion <11){
+            db.execSQL("ALTER TABLE Events ADD location Text");
+        }
+
 
 
     }
@@ -65,7 +69,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     }
 
     public boolean insertEvent(String title, String category, String date, String time,
-                               String details, String author, String endTime, long dateTime) {
+                               String details, String author, String endTime, long dateTime, String place) {
         SQLiteDatabase db = this.getWritableDatabase();
         ContentValues eventValues = new ContentValues();
         eventValues.put("title", title);
@@ -76,6 +80,7 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         eventValues.put("author", author);
         eventValues.put("endTime", endTime);
         eventValues.put("dateTime", dateTime);
+        eventValues.put("location", place);
         long ins = db.insert("Events", null, eventValues);
         if (ins == -1) return false;
         else return true;
@@ -138,5 +143,19 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         cursor.moveToPosition(position);
         String eTime = cursor.getString(cursor.getColumnIndexOrThrow("endTime"));
         return eTime;
+    }
+    public String getLocation (Cursor cursor, int position) {
+        cursor.moveToPosition(position);
+        String location = cursor.getString(cursor.getColumnIndexOrThrow("location"));
+        return location;
+    }
+    public int getId (Cursor cursor, int position) {
+        cursor.moveToPosition(position);
+        int id = cursor.getInt(cursor.getColumnIndexOrThrow("_id"));
+        return id;
+    }
+    public void deleteEvent(int id){
+        SQLiteDatabase db = this.getWritableDatabase();
+        db.execSQL("Delete from Events where _id=?", new String[]{String.valueOf(id)});
     }
 }
