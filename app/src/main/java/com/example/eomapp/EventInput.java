@@ -62,7 +62,7 @@ public class EventInput extends AppCompatActivity implements AdapterView.OnItemS
         author = findViewById(R.id.authorText);
         endTime = findViewById(R.id.endTime);
         placesText= findViewById(R.id.placeText);
-        String[] categories = new String[]{"Sports", "Arts", "Club", "Other"};
+        String[] categories = new String[]{"Pick a category...", "Sports", "Arts", "Club", "Other"};
         ArrayAdapter<String> adapter = new ArrayAdapter<>(this, android.R.layout.simple_spinner_dropdown_item, categories);
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         category.setAdapter(adapter);

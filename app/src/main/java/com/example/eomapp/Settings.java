@@ -14,7 +14,7 @@ public class Settings extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
-        backBtn= findViewById(R.id.backBtn);
+        //backBtn= findViewById(R.id.backBtn);
         logout= findViewById(R.id.logoutBtn);
         System.out.println("step 1");
         logout.setOnClickListener(new View.OnClickListener() {
@@ -26,12 +26,13 @@ public class Settings extends AppCompatActivity {
         });
 
 
-         backBtn.setOnClickListener(new View.OnClickListener() {
+         /*backBtn.setOnClickListener(new View.OnClickListener() {
              @Override
              public void onClick(View v) {
                  Intent startIntent = new Intent(getApplicationContext(), HomeFeed.class);
                  startActivity(startIntent);
              }
-         });
+         }*/
+
     }
 }

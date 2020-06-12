@@ -14,6 +14,7 @@ public class DetailsPage extends AppCompatActivity {
    TextView startTime;
    TextView endTime;
    TextView location;
+   TextView eventTitle;
    int id;
    Button delete;
    Bundle extras2 =new Bundle();
@@ -22,6 +23,7 @@ public class DetailsPage extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_details_page);
+        eventTitle = findViewById((R.id.eventTitle));
         detailsPage = findViewById(R.id.detailsView);
         endTime=findViewById(R.id.endTimeView);
         startTime= findViewById(R.id.startTimeView);
@@ -33,10 +35,12 @@ public class DetailsPage extends AppCompatActivity {
         String sTime=extras.getString("startTime");
         String eventEndTime=extras.getString("endTime");
         String place= extras.getString("location");
+        String title= extras.getString("title");
         id=extras.getInt("id");
         startTime.setText("Event Start: "+ sTime);
         endTime.setText("Event End: "+ eventEndTime);
         detailsPage.setText(eventDetails);
+        eventTitle.setText(title);
         location.setText(place);
         extras2.putInt("id",id);
         extras2.putString ("activity", "DetailsPage");

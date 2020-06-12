@@ -121,6 +121,9 @@
     <string name="event">Event</string>
     <string name="end_time">To:</string>
     <string name="from">From:</string>
-
+    <string name="event_title"> What is the event called? </string>
+    <string name="pick_a_date"> When is the event?</string>
+    <string name="pick_a_location"> Where is the event?</string>
+    <string name="description"> Describe the event!</string>
 
 </resources>
