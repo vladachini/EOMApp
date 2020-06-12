@@ -63,12 +63,4 @@
         android:layout_height="wrap_content"
         tools:visibility="invisible" />
 
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="match_parent"
-        android:layout_height="270dp"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="461dp"
-        app:srcCompat="@drawable/dottedline" />
-
 </RelativeLayout>
