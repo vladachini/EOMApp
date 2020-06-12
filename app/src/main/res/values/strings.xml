@@ -114,6 +114,9 @@
     <string name="events_and_announcements">Events and Announcements</string>
     <string name="create_an_event">Create an Event</string>
     <string name="Remember_Me">Remember Me</string>
+    <string name="enterAdmin" />
+    <string name="enter" />
+    <string name="back" />
 
 
 </resources>

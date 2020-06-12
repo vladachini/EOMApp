@@ -15,6 +15,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import static android.graphics.Paint.UNDERLINE_TEXT_FLAG;
+
 public class MainActivity extends AppCompatActivity {
     EditText e1, p1;
     String email, password;
@@ -41,7 +43,7 @@ public class MainActivity extends AppCompatActivity {
             saveLoginCheckBox.setChecked(true);
         }
         TextView signUp = findViewById(R.id.textView5);
-        signUp.setPaintFlags(signUp.getPaintFlags() | Paint.UNDERLINE_TEXT_FLAG);
+        //signUp.setPaintFlags(signUp.getPaintFlags() | UNDERLINE_TEXT_FLAG);
         Button login = findViewById(R.id.loginButton);
         db = new DatabaseHelper(this);
         signUp.setOnClickListener(new View.OnClickListener() {
