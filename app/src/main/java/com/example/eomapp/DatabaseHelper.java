@@ -152,7 +152,6 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public int getId (Cursor cursor, int position) {
         cursor.moveToPosition(position);
         int id = cursor.getInt(cursor.getColumnIndexOrThrow("_id"));
-        //String eventId= Integer.toString(id);
         return id;
     }
     public void deleteEvent(int id){
