@@ -162,4 +162,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         String title = cursor.getString(cursor.getColumnIndexOrThrow("title"));
         return title;
     }
+    public String getTitle (Cursor cursor, int position) {
+        cursor.moveToPosition(position);
+        String title = cursor.getString(cursor.getColumnIndexOrThrow("title"));
+        return title;
+    }
 }

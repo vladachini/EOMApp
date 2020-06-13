@@ -73,7 +73,7 @@ public class HomeFeed extends AppCompatActivity implements AdapterView.OnItemSel
                 String eventStartTime= db.getStartTime(cursor,p);
                 String eventEndTime=db.getEndTime(cursor,p);
                 String place=db.getLocation(cursor,p);
-                String title = db.getTitle (cursor, p);
+                String title= db.getTitle(cursor,p);
                 int eventId= db.getId(cursor,p);
                 extras.putString("details",eDetails);
                 extras.putString ("startTime", eventStartTime);
