@@ -22,25 +22,6 @@
         android:text="@string/event"
         android:textAppearance="@style/TextAppearance.AppCompat.Large" />
 
-    <ImageView
-        android:id="@+id/imageView15"
-        android:layout_width="565dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="9dp"
-        android:layout_marginLeft="9dp"
-        android:layout_marginTop="-259dp"
-        android:layout_marginEnd="-12dp"
-        android:layout_marginRight="-12dp"
-        android:layout_marginBottom="435dp"
-        android:contentDescription="TODO"
-        app:srcCompat="@drawable/dottedline" />
-
     <TextView
         android:id="@+id/startTimeView"
         android:layout_width="205dp"

@@ -157,5 +157,9 @@ public class DatabaseHelper extends SQLiteOpenHelper {
     public void deleteEvent(int id){
         SQLiteDatabase db = this.getWritableDatabase();
         db.execSQL("Delete from Events where _id=?", new String[]{String.valueOf(id)});
+    }  public String getTitle (Cursor cursor, int position) {
+        cursor.moveToPosition(position);
+        String title = cursor.getString(cursor.getColumnIndexOrThrow("title"));
+        return title;
     }
 }
